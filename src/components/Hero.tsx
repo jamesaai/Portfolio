@@ -2,32 +2,42 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from "@/components/ui/button";
 import AnimatedText from './AnimatedText';
-import { Github, Linkedin, Eye, FileText, X, Download } from 'lucide-react';
+import { CloudDownload } from './CloudDownload';
+import { LayoutGrid } from './LayoutGrid';
+import { FileChartColumn } from './FileChartColumn';
+import { Github, Linkedin, X } from 'lucide-react';
 
 const Hero = () => {
+  // Replace 'YOUR_FILE_ID' with your actual Google Drive file ID
+  // To get the file ID: Upload your PDF to Google Drive, make it public, 
+  // then copy the ID from the URL: https://drive.google.com/file/d/FILE_ID_HERE/view
+  const GOOGLE_DRIVE_FILE_ID = '1L9pEnCHCANDchLQuPWTEKmobIQGEeiQu'; // Replace with your actual file ID
+
   const handleResumeView = () => {
-    window.open('/Kalp_Full_Stack.pdf', '_blank');
+    window.open(`https://drive.google.com/file/d/${GOOGLE_DRIVE_FILE_ID}/preview`, '_blank');
   };
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Kalp_Full_Stack.pdf';
-    link.download = 'Kalp_Full_Stack.pdf';
+    link.href = '/KalpResume.pdf';
+    link.download = 'KalpResume.pdf';
     link.click();
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-36">
-      <div className="container mx-auto px-4 z-10">
-        <div className="max-w-3xl mx-auto text-center">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-36">
+      <div className="container mx-auto px-6 z-10 relative">
+        <div className="max-w-6xl mx-auto text-center px-4">
           <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl font-bold leading-normal mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-relaxed mb-6"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <span className="block">Hi, I'm Kalp Senghani</span>
-            <span className="block mt-2 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">I design and develop high-performance web applications.</span>
+            <span className="block mt-2">
+              <span className="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">Full Stack Developer</span> <span className="text-white">crafting<br className="hidden sm:block" /> scalable, data-driven, and reliable <br className="hidden sm:block" /> </span><span className="bg-gradient-to-r from-red-500 via-green-500 to-purple-500 text-transparent bg-clip-text">Software solutions.</span>
+            </span>
           </motion.h1>
           
           <motion.h2 
@@ -90,28 +100,25 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.6 }}
           >
-            <Button className="py-6 px-8 bg-blue-600 hover:bg-blue-700 text-white flex items-center gap-2">
-              <Eye className="w-5 h-5 mr-2" />
-              <a href="#projects">My Work</a>
-            </Button>
+            <a href="#projects" className="gradient-border-button">
+              <LayoutGrid width={20} height={20} stroke="#ffffff" />
+              My Work
+            </a>
             <div className="flex items-center gap-2">
-              <Button 
-                variant="outline" 
-                className="py-6 px-8 border-blue-500/30 text-blue-400 hover:bg-blue-900/20 flex items-center gap-2"
+              <button 
+                className="gradient-border-button"
                 onClick={handleResumeView}
               >
-                <FileText className="w-5 h-5 mr-2" />
+                <FileChartColumn width={20} height={20} stroke="#ffffff" />
                 Resume
-              </Button>
-              <Button 
-                variant="outline" 
-                size="icon"
-                className="py-6 px-3 border-blue-500/30 text-blue-400 hover:bg-blue-900/20"
+              </button>
+              <button 
+                className="gradient-border-button download-btn"
                 onClick={handleResumeDownload}
                 title="Download Resume"
               >
-                <Download className="w-5 h-5" />
-              </Button>
+                <CloudDownload width={20} height={20} stroke="#ffffff" />
+              </button>
             </div>
           </motion.div>
           

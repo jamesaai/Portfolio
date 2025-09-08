@@ -10,7 +10,7 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "Portfolio with Admin Dashboard",
-    description: "A modern, full-stack portfolio website featuring an integrated admin dashboard for seamless content and project management. The platform supports secure authentication with Next-Auth, state management via React Context API. The admin dashboard allows easy updates to portfolio content, project listings, and blog posts, all within a responsive and visually engaging UI.",
+    description: "Full-stack portfolio with <span class='gradient-highlight'>integrated admin dashboard</span> for <span class='gradient-highlight'>seamless content management</span>. Features <span class='gradient-highlight'>Next-Auth authentication</span> and <span class='gradient-highlight'>real-time updates</span>.",
     image: "/lovable-uploads/Portfolio.png",
     tags: ["React", "Next.js", "Tailwind CSS", "JS", "Node.js", "Express.js", "Next-Auth", "Context API", "Mongo"],
     demoUrl: "https://kalpsenghani1.netlify.app/",
@@ -19,7 +19,7 @@ const projectsData: Project[] = [
   {
     id: 2,
     title: "Employee Management System",
-    description: "A comprehensive employee management solution built with Angular and Node.js/GraphQL. Features include complete CRUD operations for employee data, secure file upload capabilities, robust authentication system, and a modern responsive UI. The system provides an efficient way to manage employee information, track records, and handle administrative tasks.",
+    description: "Comprehensive <span class='gradient-highlight'>Angular & GraphQL</span> solution with <span class='gradient-highlight'>complete CRUD operations</span>, <span class='gradient-highlight'>secure file uploads</span>, and <span class='gradient-highlight'>robust authentication</span>.",
     image: "/lovable-uploads/Ems.png",
     tags: ["Angular", "Node.js", "GraphQL", "Authentication", "Apollo Client","Express.js"],
     demoUrl: "https://emp-hub.netlify.app/",
@@ -28,7 +28,7 @@ const projectsData: Project[] = [
   {
     id: 3,
     title: "SpaceX Launch Tracker",
-    description: "A comprehensive SpaceX launch tracker that displays upcoming and past launches with advanced filtering, sorting, and search capabilities. Features include mission details, launch status, and rocket information.",
+    description: "Real-time <span class='gradient-highlight'>SpaceX API integration</span> with <span class='gradient-highlight'>advanced filtering</span>, <span class='gradient-highlight'>search capabilities</span>, and <span class='gradient-highlight'>mission tracking</span>.",
     image: "/lovable-uploads/Space-X.png",
     tags: ["Angular", "SpaceX API", "TypeScript", "Tailwind"],
     demoUrl: "https://spacexlabtest2.netlify.app/",
@@ -37,16 +37,16 @@ const projectsData: Project[] = [
   {
     id: 4,
     title: "Crypto Analytics Dashboard",
-    description: "A full-stack web application for tracking and analyzing cryptocurrency data in real-time. Features real-time price tracking, historical data visualization, portfolio management, price alerts, and interactive charts. Built with React, Tailwind CSS, FastAPI, MongoDB, and more.",
+    description: "Full-stack <span class='gradient-highlight'>real-time crypto tracking</span> with <span class='gradient-highlight'>portfolio management</span>, <span class='gradient-highlight'>price alerts</span>, and <span class='gradient-highlight'>interactive charts</span>.",
     image: "/lovable-uploads/crypto.png",
     tags: ["React.js", "Tailwind CSS", "Recharts", "Axios", "SWR", "Zustand", "FastAPI", "MongoDB", "Python"],
-    demoUrl: "https://crypto-analytics-frontend.onrender.com/", // Replace with actual live link if available
+    demoUrl: "https://crypto-analytics-frontend.onrender.com/",
     githubUrl: "https://github.com/kalpsenghani/crypto-analytics-dashboard"
   },
   {
     id: 5,
     title: "E-commerce Platform",
-    description: "A robust e-commerce platform built with Java Spring Boot, featuring microservices architecture and real-time inventory management. The system implements secure payment processing, order tracking, and customer analytics. Key features include Docker containerization for easy deployment, Kafka for event streaming and real-time notifications, and Swagger for comprehensive API documentation. The platform ensures high availability and scalability through distributed architecture.",
+    description: "Enterprise <span class='gradient-highlight'>microservices architecture</span> with <span class='gradient-highlight'>Docker containerization</span>, <span class='gradient-highlight'>Kafka event streaming</span>, and <span class='gradient-highlight'>secure payment processing</span>.",
     image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
     tags: ["Java", "Spring Boot", "Docker", "Kafka", "Swagger", "Microservices"],
     demoUrl: "https://example.com/ecommerce-demo",
@@ -55,7 +55,7 @@ const projectsData: Project[] = [
   {
     id: 6,
     title: "YouTube Short VS Long Analyzer",
-    description: "A comprehensive analytics platform that compares the performance, audience demographics, and engagement metrics of YouTube Shorts versus long-form videos. Features include side-by-side analytics, interactive charts, and actionable insights to help creators optimize their content strategy for both formats.",
+    description: "Advanced <span class='gradient-highlight'>analytics platform</span> comparing <span class='gradient-highlight'>YouTube performance metrics</span> with <span class='gradient-highlight'>interactive visualizations</span> and <span class='gradient-highlight'>actionable insights</span>.",
     image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "React Query", "React Router", "Framer Motion", "Recharts"],
     demoUrl: "https://yt-analyzer-kappa.vercel.app/",

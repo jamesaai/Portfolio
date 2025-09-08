@@ -64,7 +64,7 @@ const techIconMap: Record<string, string> = {
 const microProjectsData = [
   {
     title: "AI Task Manager",
-    description: "AI-powered platform for smart task organization and productivity.",
+    description: "<span class='gradient-highlight'>AI-powered</span> platform for <span class='gradient-highlight'>smart task organization</span> and <span class='gradient-highlight'>productivity optimization</span>.",
     image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     tags: ["AI", "React", "Node.js", "NLP", "Machine Learning"],
     demoUrl: "https://example.com/demo1",
@@ -72,7 +72,7 @@ const microProjectsData = [
   },
   {
     title: "EventRaze",
-    description: "Event management platform with admin dashboard.",
+    description: "Event management platform with <span class='gradient-highlight'>admin dashboard</span> and <span class='gradient-highlight'>PHP backend</span> integration.",
     image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     tags: ["PHP", "Postgres", "HTML", "CSS", "JavaScript", "XAMPP"],
     demoUrl: undefined,
@@ -80,7 +80,7 @@ const microProjectsData = [
   },
   {
     title: "Weather Forecast",
-    description: "Weather app with real-time data and forecasts.",
+    description: "Real-time <span class='gradient-highlight'>weather tracking</span> with <span class='gradient-highlight'>OpenWeatherMap API</span> and <span class='gradient-highlight'>forecast predictions</span>.",
     image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     tags: ["React", "OpenWeatherMap API", "CSS", "Weather API", "Forecast"],
     demoUrl: "https://weather-app-kalpsenghani.netlify.app/",
@@ -88,7 +88,7 @@ const microProjectsData = [
   },
   {
     title: "YouTube Short VS Long Analyzer",
-    description: "A YouTube analytics platform for comparing short and long video performance, audience, and engagement.",
+    description: "Advanced <span class='gradient-highlight'>YouTube analytics</span> comparing <span class='gradient-highlight'>video performance metrics</span> with <span class='gradient-highlight'>interactive visualizations</span>.",
     image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
     tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "React Query", "React Router", "Framer Motion", "Recharts"],
     demoUrl: undefined,
@@ -96,7 +96,7 @@ const microProjectsData = [
   },
   {
     title: "Pomodoro Timer",
-    description: "Customizable Pomodoro timer with stats.",
+    description: "Customizable <span class='gradient-highlight'>Pomodoro timer</span> with <span class='gradient-highlight'>productivity stats</span> and <span class='gradient-highlight'>focus tracking</span>.",
     image: "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     tags: ["React", "Timer", "Productivity", "Stats"],
     demoUrl: "https://pomo-focus-eta.vercel.app/",
@@ -104,7 +104,7 @@ const microProjectsData = [
   },
   {
     title: "AI Job Advisor",
-    description: "A full stack web application that analyzes resumes using AI to provide job role suggestions, resume improvement tips, and interview preparation questions. Upload your resume for AI analysis powered by OpenAI GPT-4, receive personalized recommendations, top job role suggestions, resume tips, and interview questions tailored to your experience. Stores previous analysis results for future reference.",
+    description: "Full-stack <span class='gradient-highlight'>AI resume analyzer</span> powered by <span class='gradient-highlight'>OpenAI GPT-4</span> with <span class='gradient-highlight'>job recommendations</span> and <span class='gradient-highlight'>interview prep</span>.",
     image: "/lovable-uploads/Job-Advisor.png",
     tags: ["Axios", "OpenAI GPT-4", "React", "Node.js"],
     demoUrl: "https://yourjobadvisor.netlify.app/",
@@ -141,15 +141,16 @@ interface GridItemProps {
 const GridItem = ({ project }: GridItemProps) => {
   return (
     <li className="min-h-[16rem] list-none">
-      <div
-        className="relative h-full rounded-2xl border-2 border-white/30 hover:border-blue-400 transition-colors duration-300 p-4 overflow-hidden shadow-2xl group card-shadow-effect project-card-hover input-shadow-effect"
-        style={{
-          backgroundImage: `url(${project.image})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
+      <div className="micro-project-card">
+        <div
+          className="micro-project-card-inner relative h-full rounded-2xl border-2 border-white/30 hover:border-blue-400 transition-colors duration-300 p-4 overflow-hidden shadow-2xl group card-shadow-effect project-card-hover input-shadow-effect"
+          style={{
+            backgroundImage: `url(${project.image})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+        >
         <GlowingEffect
           spread={20}
           glow={true}
@@ -165,9 +166,10 @@ const GridItem = ({ project }: GridItemProps) => {
               <h3 className="font-sans text-xl font-bold text-white mb-1">
                 {project.title}
               </h3>
-              <p className="font-sans text-sm text-gray-200 mb-2">
-                {project.description}
-              </p>
+              <p 
+                className="font-sans text-sm text-gray-200 mb-2"
+                dangerouslySetInnerHTML={{ __html: project.description }}
+              />
             </div>
             {/* Tech stack logos - vertical column, glassmorphism style */}
             <div className="flex flex-col gap-1 items-end justify-start min-w-[2rem]">
@@ -214,6 +216,7 @@ const GridItem = ({ project }: GridItemProps) => {
               </a>
             )}
           </div>
+        </div>
         </div>
       </div>
     </li>

@@ -46,7 +46,7 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-        <div className="flex justify-between items-center h-full">
+        <div className="flex items-center h-full">
           {/* Logo with glowing effect */}
           <a href="#" className="relative group flex items-center justify-center">
             {/* Full logo glow effect */}
@@ -60,7 +60,7 @@ const Navbar = () => {
             />
           </a>
           
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Centered */}
           <div className="hidden md:flex items-center flex-1 justify-center">
             {/* Main Navigation */}
             <div className="flex px-8 py-2 bg-gray-900/30 backdrop-blur-md rounded-full border border-white/10 shadow-xl">
@@ -75,16 +75,20 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Contact Button */}
-          <div className="hidden md:block">
+          {/* Contact and Hire Me Buttons - Right side */}
+          <div className="hidden md:flex items-center gap-3 ml-auto">
+            <a href="#contact" className="glow-button">
+              <Mail className="w-4 h-4 mr-2" />
+              Contact
+            </a>
             <Button
-              className="px-8 py-2 rounded-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:from-blue-400 hover:via-purple-400 hover:to-pink-400 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200"
+              className="px-4 py-2 rounded-full bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white focus:ring-2 focus:ring-gray-400 hover:shadow-xl transition duration-200 text-flicker-out-glow-normal"
               asChild
             >
               <a href="#contact">
                 <span className="relative flex items-center">
-                  <Mail className="w-4 h-4 mr-2" />
-                  Contact
+                  <Sparkles className="w-4 h-4 mr-1" />
+                  Hire Me
                 </span>
               </a>
             </Button>
