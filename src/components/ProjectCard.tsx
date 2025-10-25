@@ -15,6 +15,11 @@ export interface Project {
   status?: string;
   statusColor?: string;
   statusGlow?: string;
+  caseStudy?: {
+    problem?: string;
+    solution?: string;
+    result?: string;
+  };
 }
 
 interface ProjectCardProps {
@@ -23,6 +28,18 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+  // small icon map for common tech tags (grayscale/minimized)
+  const techIconMap: Record<string, string> = {
+    React: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+    'Next.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+    'Node.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+    Docker: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+    MongoDB: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+    TypeScript: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+    Java: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
+    Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
+    Stripe: 'https://seeklogo.com/images/S/stripe-logo-4C3A1E4C67-seeklogo.com.png'
+  };
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -75,12 +92,28 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
               )}
             </CardTitle>
           </div>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {project.tags.map((tag, index) => (
-              <Badge key={index} variant="outline" className="text-xs bg-gray-800/50 text-blue-300 border-blue-500/20">
-                {tag}
-              </Badge>
-            ))}
+          {/* tech logos (subtle grayscale) */}
+          <div className="flex items-center gap-2 mt-2">
+            <div className="flex items-center gap-2">
+              {project.tags.slice(0, 6).map((tag, i) => (
+                techIconMap[tag] ? (
+                  <img
+                    key={i}
+                    src={techIconMap[tag]}
+                    alt={tag}
+                    loading="lazy"
+                    width={20}
+                    height={20}
+                    className="w-5 h-5 object-contain opacity-70 grayscale"
+                    aria-hidden="true"
+                  />
+                ) : (
+                  <Badge key={i} variant="outline" className="text-xs bg-gray-800/50 text-blue-300 border-blue-500/20">
+                    {tag}
+                  </Badge>
+                )
+              ))}
+            </div>
           </div>
         </CardHeader>
         
@@ -89,6 +122,30 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             className="text-sm text-gray-400 main-project-card__description"
             dangerouslySetInnerHTML={{ __html: project.description }}
           />
+
+          {/* Case study: Problem / Solution / Result */}
+          {project.caseStudy && (
+            <div className="mt-4 text-sm text-gray-300 space-y-3">
+              {project.caseStudy.problem && (
+                <div>
+                  <div className="text-xs text-blue-400 font-semibold">Problem</div>
+                  <div className="text-muted-foreground">{project.caseStudy.problem}</div>
+                </div>
+              )}
+              {project.caseStudy.solution && (
+                <div>
+                  <div className="text-xs text-blue-400 font-semibold">Solution</div>
+                  <div className="text-muted-foreground">{project.caseStudy.solution}</div>
+                </div>
+              )}
+              {project.caseStudy.result && (
+                <div>
+                  <div className="text-xs text-blue-400 font-semibold">Result</div>
+                  <div className="text-muted-foreground">{project.caseStudy.result}</div>
+                </div>
+              )}
+            </div>
+          )}
         </CardContent>
         
         <CardFooter className="flex justify-between gap-4 pt-2">

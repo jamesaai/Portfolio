@@ -10,7 +10,12 @@ const projectsData: Project[] = [
   {
     id: 1,
     title: "Portfolio with Admin Dashboard",
-    description: "Full-stack portfolio with <span class='gradient-highlight'>integrated admin dashboard</span> for <span class='gradient-highlight'>seamless content management</span>. Features <span class='gradient-highlight'>Next-Auth authentication</span> and <span class='gradient-highlight'>real-time updates</span>.",
+    description: "Full-stack portfolio with <span class='gradient-highlight'>integrated admin dashboard</span> for <span class='gradient-highlight'>seamless content management</span>.",
+    caseStudy: {
+      problem: "Maintaining content across multiple static pages required manual edits and slowed updates.",
+      solution: "Built an admin dashboard with Next-Auth and a content API enabling non-technical edits and deploy previews.",
+      result: "Reduced content update time from hours to <strong>minutes</strong> and empowered stakeholders to self-manage portfolio content."
+    },
     image: "/lovable-uploads/Portfolio.png",
     tags: ["React", "Next.js", "Tailwind CSS", "JS", "Node.js", "Express.js", "Next-Auth", "Context API", "Mongo"],
     demoUrl: "https://kalpsenghani1.netlify.app/",
@@ -19,7 +24,12 @@ const projectsData: Project[] = [
   {
     id: 2,
     title: "Employee Management System",
-    description: "Comprehensive <span class='gradient-highlight'>Angular & GraphQL</span> solution with <span class='gradient-highlight'>complete CRUD operations</span>, <span class='gradient-highlight'>secure file uploads</span>, and <span class='gradient-highlight'>robust authentication</span>.",
+    description: "Comprehensive <span class='gradient-highlight'>Angular & GraphQL</span> solution with <span class='gradient-highlight'>complete CRUD operations</span>.",
+    caseStudy: {
+      problem: "Manual HR workflows led to lost requests and bloated spreadsheets.",
+      solution: "Delivered an Angular frontend with GraphQL endpoints and secure file uploads to centralize employee data.",
+      result: "Improved processing time by <strong>40%</strong> and provided audit-ready records for HR."
+    },
     image: "/lovable-uploads/Ems.png",
     tags: ["Angular", "Node.js", "GraphQL", "Authentication", "Apollo Client","Express.js"],
     demoUrl: "https://emp-hub.netlify.app/",
@@ -28,7 +38,12 @@ const projectsData: Project[] = [
   {
     id: 3,
     title: "SpaceX Launch Tracker",
-    description: "Real-time <span class='gradient-highlight'>SpaceX API integration</span> with <span class='gradient-highlight'>advanced filtering</span>, <span class='gradient-highlight'>search capabilities</span>, and <span class='gradient-highlight'>mission tracking</span>.",
+    description: "Real-time <span class='gradient-highlight'>SpaceX API integration</span> with <span class='gradient-highlight'>advanced filtering</span>.",
+    caseStudy: {
+      problem: "SpaceX launch data was scattered across endpoints making comparisons difficult.",
+      solution: "Built a unified dashboard with normalized data, advanced filters and client-side caching.",
+      result: "Enabled analysts to query and compare missions with <strong>sub-second</strong> UX for common filters."
+    },
     image: "/lovable-uploads/Space-X.png",
     tags: ["Angular", "SpaceX API", "TypeScript", "Tailwind"],
     demoUrl: "https://spacexlabtest2.netlify.app/",
@@ -37,7 +52,12 @@ const projectsData: Project[] = [
   {
     id: 4,
     title: "Crypto Analytics Dashboard",
-    description: "Full-stack <span class='gradient-highlight'>real-time crypto tracking</span> with <span class='gradient-highlight'>portfolio management</span>, <span class='gradient-highlight'>price alerts</span>, and <span class='gradient-highlight'>interactive charts</span>.",
+    description: "Full-stack <span class='gradient-highlight'>real-time crypto tracking</span> with <span class='gradient-highlight'>portfolio management</span>.",
+    caseStudy: {
+      problem: "Users struggled to track portfolio health across exchanges.",
+      solution: "Implemented real-time price feeds, aggregated holdings, and alerting with WebSockets.",
+      result: "Users retained better portfolio visibility and reported faster decision-making."
+    },
     image: "/lovable-uploads/crypto.png",
     tags: ["React.js", "Tailwind CSS", "Recharts", "Axios", "SWR", "Zustand", "FastAPI", "MongoDB", "Python"],
     demoUrl: "https://crypto-analytics-frontend.onrender.com/",
@@ -45,12 +65,12 @@ const projectsData: Project[] = [
   },
   {
     id: 5,
-    title: "E-commerce Platform",
-    description: "Enterprise <span class='gradient-highlight'>microservices architecture</span> with <span class='gradient-highlight'>Docker containerization</span>, <span class='gradient-highlight'>Kafka event streaming</span>, and <span class='gradient-highlight'>secure payment processing</span>.",
-    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    tags: ["Java", "Spring Boot", "Docker", "Kafka", "Swagger", "Microservices"],
-    demoUrl: "https://example.com/ecommerce-demo",
-    githubUrl: "https://github.com/example/ecommerce-platform"
+    title: "Pomodoro Timer",
+    description: "Feature-rich <span class='gradient-highlight'>Pomodoro productivity suite</span> with <span class='gradient-highlight'>analytics dashboard</span>, <span class='gradient-highlight'>cross-device sync</span>, and <span class='gradient-highlight'>team focus modes</span>—built as a full project with persistence and insights.",
+    image: "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    tags: ["React", "Node.js", "MongoDB", "Analytics", "Socket.IO"],
+    demoUrl: "https://pomo-focus-eta.vercel.app/",
+    githubUrl: "https://github.com/kalpsenghani/PomoFocus"
   },
   {
     id: 6,
