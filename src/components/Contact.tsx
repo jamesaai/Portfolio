@@ -6,6 +6,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { Mail, Github, Linkedin, Send, Download, Eye, FileText, X, Code2, MessageSquare, User, MessageCircle } from 'lucide-react';
 import AnimatedCard from './AnimatedCard';
 import { Card, CardHeader, CardContent, CardFooter, CardTitle } from '@/components/ui/card';
+import { sanitizeInput, isValidEmail, checkRateLimit, isSafeInput } from '@/lib/security';
+import { getEnvConfig } from '@/lib/env';
 
 const contactMethods = [
   {
@@ -194,6 +196,7 @@ const ContactForm = () => {
     }));
   };
 
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -205,11 +208,72 @@ const ContactForm = () => {
       });
       return;
     }
+
+    // Input validation and sanitization
+    const sanitizedData = {
+      firstName: sanitizeInput(formData.firstName, 100),
+      lastName: sanitizeInput(formData.lastName, 100),
+      email: formData.email.trim().toLowerCase(),
+      collaborationType: sanitizeInput(formData.collaborationType, 50),
+      message: sanitizeInput(formData.message, 5000)
+    };
+
+    // Validate required fields
+    if (!sanitizedData.firstName || !sanitizedData.lastName) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please provide your first and last name.'
+      });
+      return;
+    }
+
+    // Additional safety check
+    if (!isSafeInput(formData.firstName) || !isSafeInput(formData.lastName) || !isSafeInput(formData.message)) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Invalid characters detected. Please check your input.'
+      });
+      return;
+    }
+
+    // Validate email
+    if (!isValidEmail(sanitizedData.email)) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please provide a valid email address.'
+      });
+      return;
+    }
+
+    // Validate message length
+    if (!sanitizedData.message || sanitizedData.message.length < 10) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please provide a message with at least 10 characters.'
+      });
+      return;
+    }
+
+    // Check rate limit (5 submissions per 24 hours)
+    if (!checkRateLimit('contact_form', 5, 24 * 60 * 60 * 1000)) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Too many submissions. Please try again tomorrow.'
+      });
+      return;
+    }
     
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
 
     try {
+      // Get API key from environment variable with validation
+      const envConfig = getEnvConfig();
+      
+      if (!envConfig.web3formsAccessKey) {
+        throw new Error('API configuration error. Please contact the site administrator.');
+      }
+
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
@@ -217,15 +281,22 @@ const ContactForm = () => {
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: 'e93c5755-8acb-4e64-872b-2ba9d3b00e54',
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          collaborationType: formData.collaborationType,
-          message: formData.message,
-          subject: 'New Contact Form Submission'
+          access_key: envConfig.web3formsAccessKey,
+          firstName: sanitizedData.firstName,
+          lastName: sanitizedData.lastName,
+          email: sanitizedData.email,
+          collaborationType: sanitizedData.collaborationType,
+          message: sanitizedData.message,
+          subject: 'New Contact Form Submission',
+          // Add honeypot field for spam protection
+          from_name: 'Portfolio Contact Form'
         })
       });
+
+      // Check if response is ok
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
 
       const data = await response.json();
 
@@ -239,9 +310,11 @@ const ContactForm = () => {
         throw new Error(data.message || 'Something went wrong');
       }
     } catch (error) {
+      // Don't expose internal error details to users
+      console.error('Form submission error:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'Failed to send message. Please try again later.'
+        message: 'Failed to send message. Please try again later or contact directly via email.'
       });
     } finally {
       setIsSubmitting(false);
