@@ -35,8 +35,19 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-4 md:mb-0">
               <img 
                 src="/lovable-uploads/e9810342-de6a-4f13-9171-0077afe8c75a.png" 
-                alt="Kalp Logo" 
+                alt="Portfolio Logo" 
                 className="h-10 w-10"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  if (!target.nextElementSibling) {
+                    const fallback = document.createElement('div');
+                    fallback.className = 'h-10 w-10 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-sm';
+                    fallback.textContent = 'BG';
+                    target.parentElement?.appendChild(fallback);
+                  }
+                }}
+                loading="lazy"
               />
               <div>
                 <p className="text-gray-400 text-sm">

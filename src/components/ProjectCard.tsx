@@ -28,6 +28,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
+  const [imageError, setImageError] = React.useState(false);
+  const [imageLoading, setImageLoading] = React.useState(true);
+  
+  // Fallback placeholder image (gradient background)
+  const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%234F46E5;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%237C3AED;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='400' fill='url(%23grad)'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='24' fill='white' text-anchor='middle' dominant-baseline='middle'%3E" + encodeURIComponent(project.title) + "%3C/text%3E%3C/svg%3E";
+  
   // small icon map for common tech tags (grayscale/minimized)
   const techIconMap: Record<string, string> = {
     React: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
@@ -39,6 +45,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
     Java: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
     Python: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
     Stripe: 'https://seeklogo.com/images/S/stripe-logo-4C3A1E4C67-seeklogo.com.png'
+  };
+  
+  const handleImageError = () => {
+    setImageError(true);
+    setImageLoading(false);
+  };
+  
+  const handleImageLoad = () => {
+    setImageLoading(false);
   };
   return (
     <motion.div
@@ -67,10 +82,19 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
         <div className="main-project-card__glow"></div>
         
         <div className="overflow-hidden h-48 relative main-project-card__image">
+          {imageLoading && !imageError && (
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 animate-pulse flex items-center justify-center">
+              <div className="text-gray-600 text-sm">Loading...</div>
+            </div>
+          )}
           <img 
-            src={project.image} 
+            src={imageError ? placeholderImage : project.image} 
             alt={project.title} 
-            className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+            className={`w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-105 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+            onError={handleImageError}
+            onLoad={handleImageLoad}
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
         </div>

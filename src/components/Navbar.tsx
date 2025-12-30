@@ -55,8 +55,20 @@ const Navbar = () => {
             </div>
             <img 
               src="/lovable-uploads/e9810342-de6a-4f13-9171-0077afe8c75a.png" 
-              alt="Kalp Logo" 
-              className="h-14 w-14 relative z-10" 
+              alt="Portfolio Logo" 
+              className="h-14 w-14 relative z-10"
+              onError={(e) => {
+                // Fallback to a simple text logo if image fails
+                const target = e.target as HTMLImageElement;
+                target.style.display = 'none';
+                if (!target.nextElementSibling) {
+                  const fallback = document.createElement('div');
+                  fallback.className = 'h-14 w-14 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-lg';
+                  fallback.textContent = 'BG';
+                  target.parentElement?.appendChild(fallback);
+                }
+              }}
+              loading="eager"
             />
           </a>
           
