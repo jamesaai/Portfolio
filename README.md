@@ -1,13 +1,14 @@
-# 🚀 Professional Portfolio
+# 🤖 Discord Bot & Roblox Management Portfolio
 
 <div align="center">
 
 ![Portfolio Preview](https://img.shields.io/badge/Portfolio-Live-blue)
 ![React](https://img.shields.io/badge/React-18.2.0-blue)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-blue)
-![Tailwind](https://img.shields.io/badge/Tailwind-3.3.0-blue)
+![Discord.js](https://img.shields.io/badge/Discord.js-14.0.0-blue)
+![Roblox](https://img.shields.io/badge/Roblox-Lua-orange)
 
-A modern, responsive portfolio website showcasing professional experience, projects, and technical expertise in a clean and interactive interface.
+A modern, responsive portfolio website showcasing Discord bot development and Roblox management systems. Features projects, technical expertise, and capabilities in building scalable automation and community management solutions.
 
 </div>
 
@@ -16,21 +17,21 @@ A modern, responsive portfolio website showcasing professional experience, proje
 - 🎨 **Responsive Design**: Optimized for all screen sizes and devices
 - 💫 **Modern UI/UX**: Clean and professional interface with smooth animations
 - 🎮 **Interactive Components**: Engaging user interactions and transitions
-- 📝 **Blog System**: Integrated blog platform with markdown support
-- 🏆 **Project Showcase**: Dynamic project display with detailed information
+- 🤖 **Discord Bot Showcase**: Dynamic display of Discord bot projects and features
+- 🎮 **Roblox Management**: Showcase of Roblox group management systems
 - 📬 **Contact Section**: Professional contact form with validation
-- 🤖 **AI Lab**: Interactive AI demonstration section
 - 🌙 **Dark Mode**: Elegant dark theme optimized for readability
 
 ## 🛠️ Tech Stack
 
 - **Frontend Framework**: React with TypeScript
 - **Styling**: Tailwind CSS with custom animations
-- **State Management**: React Query
-- **Routing**: React Router
+- **Discord Development**: Discord.js, Slash Commands, Webhooks
+- **Roblox Development**: Lua/Luau, Roblox API, Roblox Studio
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB, PostgreSQL, Redis
 - **Animations**: Framer Motion
 - **UI Components**: Custom components with shadcn/ui
-- **Markdown Support**: React Markdown
 - **Icons**: Lucide Icons
 
 ## 🚀 Getting Started
@@ -81,10 +82,10 @@ portfolio/
 ## 🎨 Customization
 
 ### Adding Projects
-Edit the project data in `src/lib/project-data.ts` to add or modify projects.
+Edit the project data in `src/components/Projects.tsx` to add or modify Discord bot and Roblox management projects.
 
-### Modifying Blog Posts
-Update blog content in `src/lib/blog-data.ts` to manage blog posts.
+### Updating Technologies
+Modify the technologies list in `src/components/Technologies.tsx` to showcase relevant skills.
 
 ### Styling
 The project uses Tailwind CSS for styling. Custom styles can be added in:
@@ -121,5 +122,5 @@ For any inquiries or suggestions, please reach out through the contact form on t
 ---
 
 <div align="center">
-Made with ❤️ by Kalp Senghani
+Made with ❤️ by Blake G - Discord Bot Developer & Roblox Management Specialist
 </div>

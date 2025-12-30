@@ -35,9 +35,9 @@ const About = () => {
               <div className="space-y-6">
                 {/* Simplified Skill Mapper for brevity */}
                 {[
-                  { label: 'Frontend', skills: ['React', 'Next.js', 'TypeScript'], color: 'from-blue-400 to-purple-500' },
-                  { label: 'Backend', skills: ['Node.js', 'Python', 'Java'], color: 'from-green-400 to-blue-500' },
-                  { label: 'AI & Cloud', skills: ['GPT-4', 'AWS', 'Docker'], color: 'from-purple-400 to-pink-500' }
+                  { label: 'Discord Development', skills: ['Discord.js', 'Slash Commands', 'Webhooks'], color: 'from-blue-400 to-purple-500' },
+                  { label: 'Backend & Database', skills: ['Node.js', 'MongoDB', 'Express.js'], color: 'from-green-400 to-blue-500' },
+                  { label: 'Roblox & Scripting', skills: ['Lua/Luau', 'Roblox API', 'Game Management'], color: 'from-purple-400 to-pink-500' }
                 ].map((group) => (
                   <div key={group.label}>
                     <h4 className="text-sm font-semibold text-blue-400 mb-3">{group.label}</h4>

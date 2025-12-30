@@ -64,7 +64,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-           Building reliable, intuitive, and future-ready systems for Roblox group and community management.
+           Building reliable, intuitive, and future-ready Discord bots and Roblox management systems for scalable community automation and game group operations.
           </motion.p>
           
           {/* Social Icons above buttons */}

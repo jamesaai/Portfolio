@@ -3,28 +3,28 @@ import React from 'react';
 export default function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Full Stack Development",
-      description: "Building complete web applications with React, Node.js, and TypeScript for modern, scalable solutions.",
+      title: "Discord Bot Development",
+      description: "Building scalable Discord bots with moderation, automation, ticketing, and community management features using Discord.js and Node.js.",
     },
     {
-      title: "AI & Machine Learning",
-      description: "Creating AI-powered applications and automation workflows using OpenAI, Python, and advanced ML techniques.",
+      title: "Roblox Management Systems",
+      description: "Creating custom Roblox group management infrastructure for staff ranks, permissions, moderation, and in-game automation with Lua.",
     },
     {
-      title: "Cloud Architecture",
-      description: "Designing scalable cloud solutions with AWS, Docker, and microservices for high-performance applications.",
+      title: "Server Automation",
+      description: "Designing automated systems for Discord servers including autoroles, scheduled messages, giveaways, and join-to-create voice channels.",
     },
     {
-      title: "Database Design",
-      description: "Expert in SQL and NoSQL databases, data modeling, and building robust data-driven applications.",
+      title: "Database Integration",
+      description: "Expert in MongoDB and PostgreSQL for persistent storage, logging moderation actions, and managing complex server configurations.",
     },
     {
-      title: "Responsive Design",
-      description: "Creating beautiful, accessible user interfaces that work seamlessly across all devices and platforms.",
+      title: "Discord API Integration",
+      description: "Leveraging Discord's API for slash commands, embeds, webhooks, OAuth, and real-time server statistics tracking.",
     },
     {
-      title: "Performance Optimization",
-      description: "Optimizing applications for speed, efficiency, and exceptional user experience through advanced techniques.",
+      title: "Community Management Tools",
+      description: "Building ticket systems, suggestion boards, welcome messages, and analytics dashboards to improve server engagement and organization.",
     },
   ];
 
