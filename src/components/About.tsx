@@ -10,26 +10,13 @@ interface TimelineItem {
 }
 
 const timelineData: TimelineItem[] = [
+  [
   {
     id: 1,
     year: "April 2025 – Present",
-    title: "YouTube Analytics SaaS – Advanced Creator Intelligence Dashboard",
-    description: `Will architect and launch a scalable SaaS platform for YouTube creators, targeting 10,000+ concurrent users with high-availability APIs. Will integrate YouTube Data API v3 to deliver real-time analytics and actionable insights with sub-200ms latency. Will enable modular, containerized deployments and interactive dashboards, aiming for a 40%+ increase in user engagement and robust multi-tier access control.`,
+    title: "Discord Bot – Scalable Server Management & Automation",
+    description: `Designed, built, and actively maintaining a production-ready Discord bot for medium to large communities. Implemented core moderation systems including bans, mutes, warnings, and kicks, along with a full ticketing system, suggestions, autoroles, and customizable welcome messages. Integrated MongoDB for persistent storage and logging of moderation actions and deleted messages. Developed advanced features such as join-to-create voice channels, music playback, server statistics, scheduled messages, and bot-authored announcements. Focused on performance, reliability, and modular architecture to reduce moderator workload and improve overall server organization and engagement.`,
     type: "experience"
-  },
-  {
-    id: 2,
-    year: "Apr. 2023 – Apr. 2025",
-    title: "Information Technology Support Specialist, George Brown College, Toronto, ON",
-    description: `Provided Tier 1/2 support for 1,000+ students and staff, maintaining campus-wide Windows/macOS systems and networked devices. Achieved a 95% satisfaction rate by resolving complex technical issues and automating health checks, reducing printer downtime by 30%. Managed asset tracking, software deployment, and IT documentation to optimize workflow efficiency.`,
-    type: "experience"
-  },
-  {
-    id: 3,
-    year: "2022 - 2025",
-    title: "Advanced Diploma in Computer Programming & Analysis, George Brown College",
-    description: "Focused on full stack development, AI, cloud computing, and mobile app development. Built multiple academic and personal projects using modern technologies.",
-    type: "education"
   }
 ];
 
