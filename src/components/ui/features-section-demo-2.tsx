@@ -23,7 +23,7 @@ export default function FeaturesSectionDemo() {
     {
       title: "Database Integration",
       description: "Expert in MongoDB and PostgreSQL for persistent storage, logging moderation actions, and managing complex server configurations.",
-      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?auto=format&fit=crop&w=800&q=80",
       icon: "💾"
     },
     {

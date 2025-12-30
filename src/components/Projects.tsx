@@ -18,7 +18,7 @@ const projectsData: Project[] = [
       result:
         "Reduced moderation overhead, improved response times, and simplified server management across multiple communities."
     },
-    image: "/lovable-uploads/Portfolio.png",
+    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=1200&q=80",
     tags: [
       "Discord.js",
       "Node.js",
@@ -43,7 +43,7 @@ const projectsData: Project[] = [
       result:
         "Improved staff efficiency, reduced abuse cases, and enabled scalable role control."
     },
-    image: "/lovable-uploads/Space-X.png",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1200&q=80",
     tags: [
       "Roblox",
       "Lua",
@@ -67,7 +67,7 @@ const projectsData: Project[] = [
       result:
         "Improved response organization and reduced unresolved tickets."
     },
-    image: "/lovable-uploads/Ems.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
     tags: [
       "Discord.js",
       "MongoDB",
@@ -91,7 +91,7 @@ const projectsData: Project[] = [
       result:
         "Enabled non-technical admins to manage bots visually and safely."
     },
-    image: "/lovable-uploads/Job-Advisor.png",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80",
     tags: [
       "React",
       "Next.js",
@@ -107,7 +107,7 @@ const projectsData: Project[] = [
     title: "Giveaways, QOTD & Automation Suite",
     description:
       "Automation tools including <span class='gradient-highlight'>giveaways with rerolls</span>, <span class='gradient-highlight'>question-of-the-day</span> posting, scheduled announcements, and engagement utilities.",
-    image: "/lovable-uploads/crypto.png",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80",
     tags: [
       "Discord.js",
       "Scheduling",
@@ -122,7 +122,7 @@ const projectsData: Project[] = [
     title: "Server Analytics & Statistics Bot",
     description:
       "Real-time <span class='gradient-highlight'>server statistics</span> showing member counts, bot counts, activity tracking, and growth insights.",
-    image: "/lovable-uploads/Portfolio.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80",
     tags: [
       "Discord.js",
       "Analytics",
