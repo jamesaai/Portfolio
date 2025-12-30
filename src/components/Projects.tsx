@@ -18,7 +18,7 @@ const projectsData: Project[] = [
       result:
         "Reduced moderation overhead, improved response times, and simplified server management across multiple communities."
     },
-    image: "/lovable-uploads/discord-bot.png",
+    image: "/lovable-uploads/Portfolio.png",
     tags: [
       "Discord.js",
       "Node.js",
@@ -43,7 +43,7 @@ const projectsData: Project[] = [
       result:
         "Improved staff efficiency, reduced abuse cases, and enabled scalable role control."
     },
-    image: "/lovable-uploads/roblox-management.png",
+    image: "/lovable-uploads/Space-X.png",
     tags: [
       "Roblox",
       "Lua",
@@ -67,7 +67,7 @@ const projectsData: Project[] = [
       result:
         "Improved response organization and reduced unresolved tickets."
     },
-    image: "/lovable-uploads/tickets.png",
+    image: "/lovable-uploads/Ems.png",
     tags: [
       "Discord.js",
       "MongoDB",
@@ -91,7 +91,7 @@ const projectsData: Project[] = [
       result:
         "Enabled non-technical admins to manage bots visually and safely."
     },
-    image: "/lovable-uploads/dashboard.png",
+    image: "/lovable-uploads/Job-Advisor.png",
     tags: [
       "React",
       "Next.js",
@@ -107,7 +107,7 @@ const projectsData: Project[] = [
     title: "Giveaways, QOTD & Automation Suite",
     description:
       "Automation tools including <span class='gradient-highlight'>giveaways with rerolls</span>, <span class='gradient-highlight'>question-of-the-day</span> posting, scheduled announcements, and engagement utilities.",
-    image: "/lovable-uploads/automation.png",
+    image: "/lovable-uploads/crypto.png",
     tags: [
       "Discord.js",
       "Scheduling",
@@ -122,7 +122,7 @@ const projectsData: Project[] = [
     title: "Server Analytics & Statistics Bot",
     description:
       "Real-time <span class='gradient-highlight'>server statistics</span> showing member counts, bot counts, activity tracking, and growth insights.",
-    image: "/lovable-uploads/stats.png",
+    image: "/lovable-uploads/Portfolio.png",
     tags: [
       "Discord.js",
       "Analytics",
