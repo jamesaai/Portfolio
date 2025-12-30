@@ -117,7 +117,7 @@ const DeveloperStats = () => (
         <div className="flex justify-center">
           <div id="SocailIcons" className="relative">
             {/* Instagram */}
-            <a href="https://instagram.com/kalpsenghani" target="_blank" rel="noopener noreferrer" className="icons instaIcon group">
+            <a href="https://instagram.com/Blake_G" target="_blank" rel="noopener noreferrer" className="icons instaIcon group">
               <span className="iconName">Instagram</span>
               <div className="icon insta">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -127,7 +127,7 @@ const DeveloperStats = () => (
             </a>
 
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/kalpsenghani" target="_blank" rel="noopener noreferrer" className="icons linkedin group">
+            <a href="https://linkedin.com/in/Blake_G" target="_blank" rel="noopener noreferrer" className="icons linkedin group">
               <span className="iconName">LinkedIn</span>
               <div className="icon link">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -137,7 +137,7 @@ const DeveloperStats = () => (
             </a>
 
             {/* YouTube */}
-            <a href="https://www.youtube.com/@kalpsenghani8581" target="_blank" rel="noopener noreferrer" className="icons youtube group">
+            <a href="https://www.youtube.com/@BlakePlayz" target="_blank" rel="noopener noreferrer" className="icons youtube group">
               <span className="iconName">YouTube</span>
               <div className="icon tube">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
