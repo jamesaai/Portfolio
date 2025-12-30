@@ -1,87 +1,137 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import ProjectCard, { Project } from './ProjectCard';
-import { Button } from "@/components/ui/button";
-import { Link } from 'react-router-dom';
 import GlowingEffectDemo from "./ui/glowing-effect-demo";
 
-// Sample projects data
+// Projects data – Discord Bots & Roblox Management
 const projectsData: Project[] = [
   {
     id: 1,
-    title: "Portfolio with Admin Dashboard",
-    description: "Full-stack portfolio with <span class='gradient-highlight'>integrated admin dashboard</span> for <span class='gradient-highlight'>seamless content management</span>.",
+    title: "All-In-One Discord Management Bot",
+    description:
+      "A powerful <span class='gradient-highlight'>multi-purpose Discord bot</span> built for <span class='gradient-highlight'>moderation</span>, <span class='gradient-highlight'>tickets</span>, <span class='gradient-highlight'>autoroles</span>, logging, music, join-to-create VCs, and server automation.",
     caseStudy: {
-      problem: "Maintaining content across multiple static pages required manual edits and slowed updates.",
-      solution: "Built an admin dashboard with Next-Auth and a content API enabling non-technical edits and deploy previews.",
-      result: "Reduced content update time from hours to <strong>minutes</strong> and empowered stakeholders to self-manage portfolio content."
+      problem:
+        "Servers relied on multiple bots that conflicted with each other and were difficult to manage at scale.",
+      solution:
+        "Developed a single modular Discord bot using slash commands, MongoDB persistence, and role-based permissions.",
+      result:
+        "Reduced moderation overhead, improved response times, and simplified server management across multiple communities."
     },
-    image: "/lovable-uploads/Portfolio.png",
-    tags: ["React", "Next.js", "Tailwind CSS", "JS", "Node.js", "Express.js", "Next-Auth", "Context API", "Mongo"],
-    demoUrl: "https://kalpsenghani1.netlify.app/",
-    githubUrl: "https://github.com/kalpsenghani/portfolio-admin-dashboard"
+    image: "/lovable-uploads/discord-bot.png",
+    tags: [
+      "Discord.js",
+      "Node.js",
+      "MongoDB",
+      "Slash Commands",
+      "Moderation",
+      "Automation"
+    ],
+    demoUrl: "",
+    githubUrl: ""
   },
   {
     id: 2,
-    title: "Employee Management System",
-    description: "Comprehensive <span class='gradient-highlight'>Angular & GraphQL</span> solution with <span class='gradient-highlight'>complete CRUD operations</span>.",
+    title: "Roblox Staff & Game Management System",
+    description:
+      "Custom <span class='gradient-highlight'>Roblox management infrastructure</span> for handling <span class='gradient-highlight'>staff ranks</span>, permissions, moderation actions, and in-game automation.",
     caseStudy: {
-      problem: "Manual HR workflows led to lost requests and bloated spreadsheets.",
-      solution: "Delivered an Angular frontend with GraphQL endpoints and secure file uploads to centralize employee data.",
-      result: "Improved processing time by <strong>40%</strong> and provided audit-ready records for HR."
+      problem:
+        "Manual staff management and in-game moderation caused delays and inconsistency.",
+      solution:
+        "Created a centralized Roblox management system synced with Discord for real-time permissions and logging.",
+      result:
+        "Improved staff efficiency, reduced abuse cases, and enabled scalable role control."
     },
-    image: "/lovable-uploads/Ems.png",
-    tags: ["Angular", "Node.js", "GraphQL", "Authentication", "Apollo Client","Express.js"],
-    demoUrl: "https://emp-hub.netlify.app/",
-    githubUrl: "https://github.com/kalpsenghani/Employee-Management-System"
+    image: "/lovable-uploads/roblox-management.png",
+    tags: [
+      "Roblox",
+      "Lua",
+      "Discord Integration",
+      "Automation",
+      "Game Management"
+    ],
+    demoUrl: "",
+    githubUrl: ""
   },
   {
     id: 3,
-    title: "SpaceX Launch Tracker",
-    description: "Real-time <span class='gradient-highlight'>SpaceX API integration</span> with <span class='gradient-highlight'>advanced filtering</span>.",
+    title: "Discord Ticket & Support System",
+    description:
+      "Advanced <span class='gradient-highlight'>ticket system</span> with auto-setup, embedded messages, role-restricted access, and full logging for support teams.",
     caseStudy: {
-      problem: "SpaceX launch data was scattered across endpoints making comparisons difficult.",
-      solution: "Built a unified dashboard with normalized data, advanced filters and client-side caching.",
-      result: "Enabled analysts to query and compare missions with <strong>sub-second</strong> UX for common filters."
+      problem:
+        "Support requests were lost in chat channels with no tracking or ownership.",
+      solution:
+        "Built a slash-command driven ticket system with auto-generated embeds and persistent ticket logs.",
+      result:
+        "Improved response organization and reduced unresolved tickets."
     },
-    image: "/lovable-uploads/Space-X.png",
-    tags: ["Angular", "SpaceX API", "TypeScript", "Tailwind"],
-    demoUrl: "https://spacexlabtest2.netlify.app/",
-    githubUrl: "https://github.com/kalpsenghani/SpaceX_API"
+    image: "/lovable-uploads/tickets.png",
+    tags: [
+      "Discord.js",
+      "MongoDB",
+      "Embeds",
+      "Permissions",
+      "Support Automation"
+    ],
+    demoUrl: "",
+    githubUrl: ""
   },
   {
     id: 4,
-    title: "Crypto Analytics Dashboard",
-    description: "Full-stack <span class='gradient-highlight'>real-time crypto tracking</span> with <span class='gradient-highlight'>portfolio management</span>.",
+    title: "Custom Discord Web Dashboard",
+    description:
+      "A full <span class='gradient-highlight'>web dashboard</span> to manage Discord bot features including tickets, moderation, autoroles, giveaways, and scheduled messages.",
     caseStudy: {
-      problem: "Users struggled to track portfolio health across exchanges.",
-      solution: "Implemented real-time price feeds, aggregated holdings, and alerting with WebSockets.",
-      result: "Users retained better portfolio visibility and reported faster decision-making."
+      problem:
+        "Server owners needed an easier way to control bot features without commands.",
+      solution:
+        "Built a React + Next.js dashboard with Discord OAuth and real-time configuration syncing.",
+      result:
+        "Enabled non-technical admins to manage bots visually and safely."
     },
-    image: "/lovable-uploads/crypto.png",
-    tags: ["React.js", "Tailwind CSS", "Recharts", "Axios", "SWR", "Zustand", "FastAPI", "MongoDB", "Python"],
-    demoUrl: "https://crypto-analytics-frontend.onrender.com/",
-    githubUrl: "https://github.com/kalpsenghani/crypto-analytics-dashboard"
+    image: "/lovable-uploads/dashboard.png",
+    tags: [
+      "React",
+      "Next.js",
+      "Discord OAuth",
+      "Vercel",
+      "Dashboard"
+    ],
+    demoUrl: "",
+    githubUrl: ""
   },
   {
     id: 5,
-    title: "Pomodoro Timer",
-    description: "Feature-rich <span class='gradient-highlight'>Pomodoro productivity suite</span> with <span class='gradient-highlight'>analytics dashboard</span>, <span class='gradient-highlight'>cross-device sync</span>, and <span class='gradient-highlight'>team focus modes</span>—built as a full project with persistence and insights.",
-    image: "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "Node.js", "MongoDB", "Analytics", "Socket.IO"],
-    demoUrl: "https://pomo-focus-eta.vercel.app/",
-    githubUrl: "https://github.com/kalpsenghani/PomoFocus"
+    title: "Giveaways, QOTD & Automation Suite",
+    description:
+      "Automation tools including <span class='gradient-highlight'>giveaways with rerolls</span>, <span class='gradient-highlight'>question-of-the-day</span> posting, scheduled announcements, and engagement utilities.",
+    image: "/lovable-uploads/automation.png",
+    tags: [
+      "Discord.js",
+      "Scheduling",
+      "Automation",
+      "Community Engagement"
+    ],
+    demoUrl: "",
+    githubUrl: ""
   },
   {
     id: 6,
-    title: "YouTube Short VS Long Analyzer",
-    description: "Advanced <span class='gradient-highlight'>analytics platform</span> comparing <span class='gradient-highlight'>YouTube performance metrics</span> with <span class='gradient-highlight'>interactive visualizations</span> and <span class='gradient-highlight'>actionable insights</span>.",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "React Query", "React Router", "Framer Motion", "Recharts"],
-    demoUrl: "https://yt-analyzer-kappa.vercel.app/",
-    githubUrl: "https://github.com/kalpsenghani/YT_Analyzer",
-    status: "In Progress",
-    statusColor: "",
+    title: "Server Analytics & Statistics Bot",
+    description:
+      "Real-time <span class='gradient-highlight'>server statistics</span> showing member counts, bot counts, activity tracking, and growth insights.",
+    image: "/lovable-uploads/stats.png",
+    tags: [
+      "Discord.js",
+      "Analytics",
+      "MongoDB",
+      "Data Tracking"
+    ],
+    demoUrl: "",
+    githubUrl: "",
+    status: "Active Development",
     statusGlow: "in-progress"
   }
 ];
@@ -90,9 +140,9 @@ const Projects = () => {
   return (
     <section id="projects" className="section-container relative">
       <h2 className="section-title mb-8">Projects</h2>
-      
-      {/* Project Description */}
-      <motion.div 
+
+      {/* Section Description */}
+      <motion.div
         className="text-center mb-12 max-w-3xl mx-auto"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -100,11 +150,15 @@ const Projects = () => {
         viewport={{ once: true }}
       >
         <p className="text-lg text-gray-300 leading-relaxed">
-          Explore my collection of innovative projects that showcase my expertise in AI, web development, and software engineering. 
-          Each project represents a unique solution to real-world challenges, combining cutting-edge technologies with practical applications.
+          A collection of <span className="gradient-highlight">Discord bots</span> and{" "}
+          <span className="gradient-highlight">Roblox management systems</span> designed to
+          automate moderation, manage staff, support large communities, and power
+          real-world game ecosystems. These projects focus on{" "}
+          <strong>scalability</strong>, <strong>reliability</strong>, and{" "}
+          <strong>clean system design</strong>.
         </p>
       </motion.div>
-      
+
       {/* Projects Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projectsData.map((project, index) => (
@@ -112,9 +166,9 @@ const Projects = () => {
         ))}
       </div>
 
-      {/* Micro Projects Section */}
+      {/* Micro Projects */}
       <div className="mt-16">
-        <h3 className="section-title mb-8">Micro Projects</h3>
+        <h3 className="section-title mb-8">Micro Projects & Utilities</h3>
         <GlowingEffectDemo />
       </div>
     </section>
