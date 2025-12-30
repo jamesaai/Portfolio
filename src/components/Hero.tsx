@@ -34,9 +34,9 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <span className="block">Hi, I'm Kalp Senghani</span>
+            <span className="block">Hi, I'm Blake G</span>
             <span className="block mt-2">
-              <span className="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">Full Stack Developer</span> <span className="text-white">crafting<br className="hidden sm:block" /> scalable, data-driven, and reliable <br className="hidden sm:block" /> </span><span className="bg-gradient-to-r from-red-500 via-green-500 to-purple-500 text-transparent bg-clip-text">Software solutions.</span>
+              <span className="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">Discord Developer</span> <span className="text-white">crafting<br className="hidden sm:block" /> scalable, automated, and reliable <br className="hidden sm:block" /> </span><span className="bg-gradient-to-r from-red-500 via-green-500 to-purple-500 text-transparent bg-clip-text">Roblox Management Systems.</span>
             </span>
           </motion.h1>
           
@@ -49,10 +49,10 @@ const Hero = () => {
             <span className="block">I craft</span>
             <AnimatedText 
               text={[
-                " Scalable full stack solutions ", 
-                "Intelligent & data-driven features", 
-                "Scalable system design",
-                "AI-powered user experiences"
+                " Atlanta High School ", 
+                "Planetary", 
+                "Bloxco Supermarkets",
+                "Los Angeles RP"
               ]} 
               className="text-blue-400 font-medium" 
             />
@@ -64,7 +64,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.6 }}
           >
-           Building reliable, intuitive, and future-ready software with a passion for innovation.
+           Building reliable, intuitive, and future-ready systems for Roblox group and community management.
           </motion.p>
           
           {/* Social Icons above buttons */}
