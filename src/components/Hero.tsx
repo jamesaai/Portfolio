@@ -11,7 +11,7 @@ const Hero = () => {
   // Replace 'YOUR_FILE_ID' with your actual Google Drive file ID
   // To get the file ID: Upload your PDF to Google Drive, make it public, 
   // then copy the ID from the URL: https://drive.google.com/file/d/FILE_ID_HERE/view
-  const GOOGLE_DRIVE_FILE_ID = '1L9pEnCHCANDchLQuPWTEKmobIQGEeiQu'; // Replace with your actual file ID
+  const GOOGLE_DRIVE_FILE_ID = '1Fxnc7k-CRwQoemZkfddQ_CRnVcrpBL3T9xjiPwwnF1l'; // Replace with your actual file ID
 
   const handleResumeView = () => {
     window.open(`https://drive.google.com/file/d/${GOOGLE_DRIVE_FILE_ID}/preview`, '_blank');
@@ -19,8 +19,8 @@ const Hero = () => {
 
   const handleResumeDownload = () => {
     const link = document.createElement('a');
-    link.href = '/KalpResume.pdf';
-    link.download = 'KalpResume.pdf';
+    link.href = '/BlakeResume.pdf';
+    link.download = 'BlakeResume.pdf';
     link.click();
   };
 
