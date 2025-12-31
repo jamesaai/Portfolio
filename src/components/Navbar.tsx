@@ -39,58 +39,41 @@ const Navbar = () => {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 right-0 h-20 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 h-16 z-50 transition-all duration-300 border-b ${
         isScrolled 
-          ? 'bg-gray-900/30 backdrop-blur-md shadow-lg shadow-black/10' 
-          : 'bg-transparent'
+          ? 'bg-[#0a0a0a]/80 backdrop-blur-xl border-white/5' 
+          : 'bg-transparent border-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
-        <div className="flex items-center h-full">
-          {/* Logo with glowing effect */}
-          <a href="#" className="relative group flex items-center justify-center">
-            {/* Full logo glow effect */}
-            <div className="absolute inset-0 z-0 pointer-events-none">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-900 rounded-full blur-2xl opacity-60 group-hover:opacity-90 transition-all duration-500"></div>
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 h-full">
+        <div className="flex items-center justify-between h-full">
+          {/* Logo */}
+          <a href="#" className="flex items-center space-x-2">
+            <div className="h-8 w-8 rounded bg-white text-black flex items-center justify-center font-bold text-sm">
+              BG
             </div>
-            <img 
-              src="/lovable-uploads/e9810342-de6a-4f13-9171-0077afe8c75a.png" 
-              alt="Portfolio Logo" 
-              className="h-14 w-14 relative z-10"
-              onError={(e) => {
-                // Fallback to a simple text logo if image fails
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                if (!target.nextElementSibling) {
-                  const fallback = document.createElement('div');
-                  fallback.className = 'h-14 w-14 flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 rounded-full text-white font-bold text-lg';
-                  fallback.textContent = 'BG';
-                  target.parentElement?.appendChild(fallback);
-                }
-              }}
-              loading="eager"
-            />
+            <span className="text-white font-medium text-sm hidden sm:block">Blake G</span>
           </a>
           
-          {/* Desktop Navigation - Centered */}
-          <div className="hidden md:flex items-center flex-1 justify-center">
-            {/* Main Navigation */}
-            <div className="flex px-8 py-2 bg-gray-900/30 backdrop-blur-md rounded-full border border-white/10 shadow-xl">
-              <div className="flex space-x-8 items-center justify-center">
-                {navItems.map((item) => (
-                  <IslandNavLink key={item.href} href={item.href}>
-                    <item.icon className="w-4 h-4 mr-2" />
-                    {item.label}
-                  </IslandNavLink>
-                ))}
-              </div>
-            </div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <a 
+                key={item.href} 
+                href={item.href}
+                className="text-sm text-gray-400 hover:text-white transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
 
-          {/* Contact button (Hire Me removed) - Right side */}
-          <div className="hidden md:flex items-center gap-3 ml-auto">
-            <a href="#contact" className="glow-button">
-              <Mail className="w-4 h-4 mr-2" />
+          {/* Contact button */}
+          <div className="hidden md:flex items-center">
+            <a 
+              href="#contact" 
+              className="px-4 py-2 bg-white text-black rounded-lg text-sm font-medium hover:bg-gray-100 transition-colors"
+            >
               Contact
             </a>
           </div>
@@ -112,24 +95,22 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileMenuOpen && (
         <motion.div 
-          className="md:hidden p-4 bg-gray-900/95 border-t border-gray-800 backdrop-blur-md"
+          className="md:hidden p-4 bg-[#0a0a0a]/95 border-t border-white/5 backdrop-blur-xl"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
         >
-          <div className="flex flex-col space-y-3">
+          <div className="flex flex-col space-y-2">
             {navItems.map((item) => (
               <MobileNavLink 
                 key={item.href} 
                 href={item.href} 
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <item.icon className="w-4 h-4 mr-2" />
                 {item.label}
               </MobileNavLink>
             ))}
             <MobileNavLink href="#contact" onClick={() => setMobileMenuOpen(false)}>
-              <Mail className="w-4 h-4 mr-2" />
               Contact
             </MobileNavLink>
           </div>
@@ -170,7 +151,7 @@ const MobileNavLink = ({
   <a 
     href={href} 
     onClick={onClick}
-    className="text-gray-300 hover:text-white py-2 px-4 block hover:bg-gray-800 rounded-md transition-colors flex items-center"
+    className="text-gray-400 hover:text-white py-2 px-4 block hover:bg-white/5 rounded-lg transition-colors text-sm"
   >
     {children}
   </a>

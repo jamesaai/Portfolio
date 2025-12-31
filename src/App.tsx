@@ -20,17 +20,19 @@ const AppContent = () => {
   }
 
   return (
-    <div className="min-h-screen w-full font-sans relative">
-      {/* Dark Horizon Glow - Base Background Layer */}
-      <div
-        className="fixed inset-0 z-0"
-        style={{
-          background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
-        }}
-      />
-      {/* Animated Vortex Background - On top of gradient */}
-      <div className="fixed inset-0 z-1">
-        <VortexBackground />
+    <div className="min-h-screen w-full font-sans relative bg-[#0a0a0a]">
+      {/* Clean modern background */}
+      <div className="fixed inset-0 z-0 bg-[#0a0a0a]">
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] opacity-100"></div>
+        {/* Subtle grid pattern */}
+        <div 
+          className="absolute inset-0 opacity-[0.03]"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px'
+          }}
+        ></div>
       </div>
       <div className="relative z-10">
         <Toaster />

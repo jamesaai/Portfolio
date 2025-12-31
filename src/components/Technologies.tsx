@@ -90,17 +90,17 @@ const Technologies = () => {
         viewport={{ once: true }}
         className="text-center mb-16"
       >
-        <h2 className="section-title">
-          Technologies I Work With
+        <h2 className="section-title mb-4">
+          Technologies
         </h2>
-        <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-400 max-w-2xl mx-auto">
           Technologies and tools for building powerful Discord bots and Roblox management systems
         </p>
       </motion.div>
       <div className="w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-16 gap-x-12">
         {techGroups.map((group) => (
           <div key={group.label} className="flex flex-col items-center h-full">
-            <h3 className="text-xl font-bold mb-6 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 text-transparent bg-clip-text">
+            <h3 className="text-lg font-semibold mb-6 text-center text-white">
               {group.label}
             </h3>
             <motion.div
@@ -125,8 +125,7 @@ const Technologies = () => {
                   }}
                   whileTap={{ scale: 0.96 }}
                 >
-                  <div className="relative p-2 rounded-xl bg-black/40 backdrop-blur-sm border border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.08)] group-hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300 w-16 h-16 flex items-center justify-center">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/20 to-purple-600/0 rounded-xl blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 group-hover:scale-100"></div>
+                  <div className="relative p-2 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/20 transition-all duration-300 w-16 h-16 flex items-center justify-center">
                     {!imageErrors[tech.name] ? (
                       <motion.img 
                         src={tech.icon} 

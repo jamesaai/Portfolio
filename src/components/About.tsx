@@ -22,15 +22,20 @@ const timelineData: TimelineItem[] = [
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-6 max-w-7xl mx-auto">
-      <h2 className="text-3xl font-bold mb-12">About Me</h2>
+    <section id="about" className="section-container relative">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="section-title mb-4">About</h2>
+        <p className="text-lg text-gray-400 mb-12 max-w-2xl">
+          Building reliable, scalable systems for Discord communities and Roblox groups.
+        </p>
+      </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
         {/* Tech Stack & Skills */}
         <div className="lg:col-span-1">
-          <Card className="h-full bg-black/40 backdrop-blur-md rounded-xl border-white/10">
+          <Card className="h-full bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
             <CardContent className="p-6">
-              <h3 className="text-xl font-semibold mb-6 bg-gradient-to-r from-blue-400 to-blue-600 text-transparent bg-clip-text">Tech Arsenal</h3>
+              <h3 className="text-xl font-semibold mb-6 text-white">Tech Stack</h3>
               
               <div className="space-y-6">
                 {/* Simplified Skill Mapper for brevity */}
@@ -75,7 +80,7 @@ const About = () => {
                     {item.type === 'education' ? <GraduationIcon /> : item.type === 'experience' ? <WorkIcon /> : <AwardIcon />}
                   </div>
 
-                  <Card className="bg-white/5 backdrop-blur-sm rounded-xl border-white/10 hover:border-blue-500/50 transition-colors shadow-2xl">
+                  <Card className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-white/20 transition-colors">
                     <CardContent className="p-6">
                       <div className="text-xs font-mono text-blue-400 mb-2">{item.year}</div>
                       <h3 className="text-xl font-bold mb-3 text-white">{item.title}</h3>

@@ -25,127 +25,70 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-36">
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden pt-20">
       <div className="container mx-auto px-6 z-10 relative">
-        <div className="max-w-6xl mx-auto text-center px-4">
-          <motion.h1 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold leading-relaxed mb-6"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <span className="block">Hi, I'm Blake G</span>
-            <span className="block mt-2">
-              <span className="bg-[radial-gradient(ellipse_at_right,_var(--tw-gradient-stops))] from-indigo-500 via-red-500 to-blue-500 text-transparent bg-clip-text">Discord Developer</span> <span className="text-white">crafting<br className="hidden sm:block" /> scalable, automated, and reliable <br className="hidden sm:block" /> </span><span className="bg-gradient-to-r from-red-500 via-green-500 to-purple-500 text-transparent bg-clip-text">Roblox Management Systems.</span>
-            </span>
-          </motion.h1>
-          
-          <motion.h2 
-            className="text-lg md:text-xl text-gray-400 mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-          >
-            <span className="block">I craft</span>
-            <AnimatedText 
-              text={[
-                " Atlanta High School ", 
-                "Planetary", 
-                "Bloxco Supermarkets",
-                "Los Angeles RP"
-              ]} 
-              className="text-blue-400 font-medium" 
-            />
-          </motion.h2>
-          
-          <motion.p 
-            className="text-md mb-10 text-gray-500"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
-          >
-           Building reliable, intuitive, and future-ready Discord bots and Roblox management systems for scalable community automation and game group operations.
-          </motion.p>
-          
-          {/* Social Icons above buttons */}
-          <motion.div 
-            className="flex justify-center gap-6 mb-6"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-          >
-            <a href="https://github.com/jamesaai" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="relative p-3 rounded-xl bg-black/40 backdrop-blur-sm border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-purple-600/0 rounded-xl blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 group-hover:scale-100"></div>
-                <Github className="w-6 h-6 relative z-10 text-white group-hover:text-blue-400 transition-colors duration-300" />
-              </div>
-            </a>
-            <a href="https://linkedin.com/in/jamesaai" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="relative p-3 rounded-xl bg-black/40 backdrop-blur-sm border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-purple-600/0 rounded-xl blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 group-hover:scale-100"></div>
-                <Linkedin className="w-6 h-6 relative z-10 text-white group-hover:text-blue-400 transition-colors duration-300" />
-              </div>
-            </a>
-            <a href="https://x.com/atlanta_public_schools" target="_blank" rel="noopener noreferrer" className="group">
-              <div className="relative p-3 rounded-xl bg-black/40 backdrop-blur-sm border border-blue-500/20 shadow-[0_0_15px_rgba(59,130,246,0.1)] group-hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600/0 via-blue-600/10 to-purple-600/0 rounded-xl blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-150 group-hover:scale-100"></div>
-                <X className="w-6 h-6 relative z-10 text-white group-hover:text-blue-400 transition-colors duration-300" />
-              </div>
-            </a>
-          </motion.div>
-          
-          <motion.div 
-            className="flex flex-col sm:flex-row justify-center gap-4"
+        <div className="max-w-4xl mx-auto px-4">
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.6 }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12"
           >
-            <a href="#projects" className="gradient-border-button">
-              <LayoutGrid width={20} height={20} stroke="#ffffff" />
-              My Work
-            </a>
-            <div className="flex items-center gap-2">
-              <button 
-                className="gradient-border-button"
-                onClick={handleResumeView}
-              >
-                <FileChartColumn width={20} height={20} stroke="#ffffff" />
-                Resume
-              </button>
-              <button 
-                className="gradient-border-button download-btn"
-                onClick={handleResumeDownload}
-                title="Download Resume"
-              >
-                <CloudDownload width={20} height={20} stroke="#ffffff" />
-              </button>
-            </div>
+            <motion.h1 
+              className="text-5xl sm:text-6xl md:text-7xl font-semibold leading-tight mb-6 text-white"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              Discord bots and Roblox management, refined for communities
+            </motion.h1>
+            
+            <motion.p 
+              className="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+            >
+              Built to help communities operate with precision, reliability, and confidence as they grow — without added complexity.
+            </motion.p>
+          
           </motion.div>
           
           <motion.div 
-            className="mt-16 flex justify-center"
+            className="flex flex-col sm:flex-row justify-center items-center gap-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+          >
+            <a 
+              href="#projects" 
+              className="inline-flex items-center justify-center px-6 py-3 bg-white text-black rounded-lg font-medium hover:bg-gray-100 transition-colors duration-200 text-sm"
+            >
+              View Projects →
+            </a>
+            <a 
+              href="#contact" 
+              className="inline-flex items-center justify-center px-6 py-3 bg-transparent text-white border border-white/20 rounded-lg font-medium hover:border-white/40 hover:bg-white/5 transition-all duration-200 text-sm"
+            >
+              Get in Touch
+            </a>
+          </motion.div>
+          
+          <motion.div 
+            className="mt-12 flex justify-center gap-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.2, duration: 0.6 }}
+            transition={{ delay: 0.7, duration: 0.6 }}
           >
-            <div className="animate-bounce p-2 bg-blue-900/30 rounded-full border border-blue-500/20">
-              <a href="#technologies" className="text-blue-400">
-                <svg 
-                  className="w-6 h-6" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3" 
-                  />
-                </svg>
-              </a>
-            </div>
+            <a href="https://github.com/jamesaai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <Github className="w-5 h-5" />
+            </a>
+            <a href="https://linkedin.com/in/jamesaai" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://x.com/atlanta_public_schools" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <X className="w-5 h-5" />
+            </a>
           </motion.div>
         </div>
       </div>

@@ -139,36 +139,28 @@ const projectsData: Project[] = [
 const Projects = () => {
   return (
     <section id="projects" className="section-container relative">
-      <h2 className="section-title mb-8">Projects</h2>
-
-      {/* Section Description */}
-      <motion.div
-        className="text-center mb-12 max-w-3xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        viewport={{ once: true }}
-      >
-        <p className="text-lg text-gray-300 leading-relaxed">
-          A collection of <span className="gradient-highlight">Discord bots</span> and{" "}
-          <span className="gradient-highlight">Roblox management systems</span> designed to
-          automate moderation, manage staff, support large communities, and power
-          real-world game ecosystems. These projects focus on{" "}
-          <strong>scalability</strong>, <strong>reliability</strong>, and{" "}
-          <strong>clean system design</strong>.
+      <div className="max-w-4xl mx-auto">
+        <h2 className="section-title mb-4">Projects</h2>
+        <p className="text-lg text-gray-400 mb-12 max-w-2xl">
+          A collection of Discord bots and Roblox management systems designed to automate moderation, manage staff, and support large communities.
         </p>
-      </motion.div>
+      </div>
 
       {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projectsData.map((project, index) => (
           <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
 
       {/* Micro Projects */}
-      <div className="mt-16">
-        <h3 className="section-title mb-8">Micro Projects & Utilities</h3>
+      <div className="mt-24">
+        <div className="max-w-4xl mx-auto mb-12">
+          <h3 className="section-title mb-4">Micro Projects & Utilities</h3>
+          <p className="text-lg text-gray-400 max-w-2xl">
+            Smaller utilities and tools built to solve specific community management challenges.
+          </p>
+        </div>
         <GlowingEffectDemo />
       </div>
     </section>

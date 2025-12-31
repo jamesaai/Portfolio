@@ -437,10 +437,13 @@ const ContactForm = () => {
 
 const Contact = () => {
   return (
-    <section id="contact" className="section-container">
-      <div className="text-center mb-12">
-        <h2 className="section-title">Let's connect</h2>
-          </div>
+    <section id="contact" className="section-container relative">
+      <div className="max-w-4xl mx-auto mb-12">
+        <h2 className="section-title mb-4">Get in Touch</h2>
+        <p className="text-lg text-gray-400 max-w-2xl">
+          Have a project in mind? Let's discuss how we can work together.
+        </p>
+      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
         {/* Left: Developer Stats, Contact Methods, Coding Platforms */}
         <DeveloperStats />

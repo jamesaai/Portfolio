@@ -72,14 +72,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       whileHover={{ y: -5 }}
       className="h-full group relative"
     >
-      {/* Gradient shadow effect */}
-      <div className="absolute -inset-1 rounded-xl bg-gradient-to-br from-amber-500/60 via-sky-500/60 to-gray-500/60 opacity-0 group-hover:opacity-100 blur-xl transition-all duration-500 -z-10 scale-110 group-hover:scale-100"></div>
-      
-      <Card className="overflow-hidden transition-all duration-300 h-full flex flex-col bg-gray-900/70 border-gray-800 rounded-xl relative project-card-hover card-shadow-effect main-project-card">
-        {/* Shine effect */}
-        <div className="main-project-card__shine"></div>
-        {/* Glow effect */}
-        <div className="main-project-card__glow"></div>
+      <Card className="overflow-hidden transition-all duration-300 h-full flex flex-col bg-white/5 border border-white/10 rounded-xl hover:border-white/20 hover:bg-white/10 relative backdrop-blur-sm">
         
         <div className="overflow-hidden h-48 relative main-project-card__image">
           {imageLoading && !imageError && (
@@ -104,14 +97,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           <div className="main-project-card__badge">In Progress</div>
         )}
         
-        <CardHeader>
+        <CardHeader className="p-6">
           <div className="flex items-center gap-2">
-            <CardTitle className="text-xl font-semibold text-white flex items-center gap-2 main-project-card__title">
+            <CardTitle className="text-xl font-semibold text-white flex items-center gap-2">
               {project.title}
               {project.statusGlow === 'in-progress' && (
-                <span className="relative flex h-3 w-3">
+                <span className="relative flex h-2 w-2">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                 </span>
               )}
             </CardTitle>
@@ -141,9 +134,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           </div>
         </CardHeader>
         
-        <CardContent className="flex-grow">
+        <CardContent className="flex-grow p-6 pt-0">
           <CardDescription 
-            className="text-sm text-gray-400 main-project-card__description"
+            className="text-sm text-gray-400 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: project.description }}
           />
 
@@ -172,21 +165,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           )}
         </CardContent>
         
-        <CardFooter className="flex justify-between gap-4 pt-2">
+        <CardFooter className="flex justify-between gap-4 p-6 pt-0">
           {project.demoUrl && (
-            <Button asChild className={`w-full px-8 py-2 rounded-full main-project-card__button ${
-              project.status 
-                ? project.statusColor || '' 
-                : 'bg-gradient-to-b from-blue-500 to-blue-600 hover:from-blue-400 hover:to-blue-500 text-white focus:ring-2 focus:ring-blue-400 hover:shadow-xl transition duration-200'
-            }`}>
+            <Button asChild className="w-full px-4 py-2 rounded-lg bg-white text-black hover:bg-gray-100 transition-colors text-sm font-medium">
               <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
-                {project.status ? project.status : 'Live Demo'}
+                {project.status ? project.status : 'View Demo'}
               </a>
             </Button>
           )}
           
           {project.githubUrl && (
-            <Button asChild className="w-full px-8 py-2 rounded-full bg-gradient-to-b from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white focus:ring-2 focus:ring-gray-400 hover:shadow-xl transition duration-200 main-project-card__button">
+            <Button asChild className="w-full px-4 py-2 rounded-lg bg-transparent border border-white/20 text-white hover:border-white/40 hover:bg-white/5 transition-all text-sm font-medium">
               <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                 GitHub
               </a>

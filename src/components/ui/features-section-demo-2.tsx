@@ -41,7 +41,7 @@ export default function FeaturesSectionDemo() {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-8 py-10 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
       {features.map((feature, index) => (
         <FeatureCard 
           key={feature.title} 
@@ -72,60 +72,13 @@ const FeatureCard = ({
   const [imageError, setImageError] = React.useState(false);
   
   return (
-    <div className="parent">
-      <div className="card">
-        {/* Background image */}
-        {image && !imageError && (
-          <div 
-            className="absolute inset-0 opacity-20 z-0"
-            style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat',
-            }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50"></div>
-          </div>
+    <div className="relative group h-full">
+      <div className="h-full bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-white/20 hover:bg-white/10 transition-all duration-200">
+        {icon && (
+          <div className="text-3xl mb-4">{icon}</div>
         )}
-        {imageError && image && (
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 to-purple-900/30 z-0"></div>
-        )}
-        
-        <div className="glass relative z-10">
-          <div className="content">
-            {icon && (
-              <div className="text-4xl mb-2">{icon}</div>
-            )}
-            <span className="title">{title}</span>
-            <span className="text">{description}</span>
-          </div>
-        </div>
-        
-        <div className="logo">
-          <div className="circle circle1"></div>
-          <div className="circle circle2"></div>
-          <div className="circle circle3"></div>
-          <div className="circle circle4"></div>
-          <div className="circle circle5">
-            {image && !imageError && (
-              <img 
-                src={image} 
-                alt={title}
-                className="w-full h-full object-cover rounded-full"
-                onError={() => setImageError(true)}
-                loading="lazy"
-              />
-            )}
-            {(!image || imageError) && (
-              <svg className="svg" viewBox="0 0 24 24">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
-                <path d="M2 17L12 22L22 17" fill="currentColor"/>
-                <path d="M2 12L12 17L22 12" fill="currentColor"/>
-              </svg>
-            )}
-          </div>
-        </div>
+        <h3 className="text-xl font-semibold text-white mb-3">{title}</h3>
+        <p className="text-sm text-gray-400 leading-relaxed">{description}</p>
       </div>
     </div>
   );
