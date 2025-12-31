@@ -58,68 +58,110 @@ const techIconMap: Record<string, string> = {
   'D3.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   'Weather API': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
   'Forecast': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Discord.js': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Lavalink': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'Music': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Canvas': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'Leveling': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Embeds': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Autoroles': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Welcome': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Reactions': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Roles': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Permissions': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Moderation': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Automation': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Filter': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Builder': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+  'Analytics': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Stats': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+  'Slash Commands': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Handler': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+  'Webhooks': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/discordjs/discordjs-original.svg',
+  'Logging': 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
 };
 
-// Micro projects data (from MicroProjects.tsx, simplified)
+// Micro projects data - Discord-related utilities
 const microProjectsData = [
   {
-    title: "AI Task Manager",
-    description: "<span class='gradient-highlight'>AI-powered</span> platform for <span class='gradient-highlight'>smart task organization</span> and <span class='gradient-highlight'>productivity optimization</span>.",
-    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["AI", "React", "Node.js", "NLP", "Machine Learning"],
-    demoUrl: "https://example.com/demo1",
-    githubUrl: "https://github.com/kalpsenghani/ai-task-manager"
-  },
-  {
-    title: "EventRaze",
-    description: "Event management platform with <span class='gradient-highlight'>admin dashboard</span> and <span class='gradient-highlight'>PHP backend</span> integration.",
-    image: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["PHP", "Postgres", "HTML", "CSS", "JavaScript", "XAMPP"],
+    title: "Discord Music Bot",
+    description: "Advanced <span class='gradient-highlight'>music playback bot</span> with <span class='gradient-highlight'>queue management</span>, <span class='gradient-highlight'>playlist support</span>, and high-quality audio streaming.",
+    image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Node.js", "Lavalink", "Music"],
     demoUrl: undefined,
-    githubUrl: "https://github.com/kalpsenghani/EventRaze"
+    githubUrl: ""
   },
   {
-    title: "Weather Forecast",
-    description: "Real-time <span class='gradient-highlight'>weather tracking</span> with <span class='gradient-highlight'>OpenWeatherMap API</span> and <span class='gradient-highlight'>forecast predictions</span>.",
-    image: "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "OpenWeatherMap API", "CSS", "Weather API", "Forecast"],
-    demoUrl: "https://weather-app-kalpsenghani.netlify.app/",
-    githubUrl: "https://github.com/kalpsenghani/Weather-App"
-  },
-  {
-    title: "YouTube Short VS Long Analyzer",
-    description: "Advanced <span class='gradient-highlight'>YouTube analytics</span> comparing <span class='gradient-highlight'>video performance metrics</span> with <span class='gradient-highlight'>interactive visualizations</span>.",
-    image: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Radix UI", "React Query", "React Router", "Framer Motion", "Recharts"],
+    title: "Discord Leveling System",
+    description: "XP-based <span class='gradient-highlight'>leveling system</span> with <span class='gradient-highlight'>rank cards</span>, <span class='gradient-highlight'>leaderboards</span>, and customizable rewards.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "MongoDB", "Canvas", "Leveling"],
     demoUrl: undefined,
-    githubUrl: "https://github.com/kalpsenghani/YT_Analyzer"
+    githubUrl: ""
   },
   {
-    title: "Pomodoro Timer",
-    description: "Customizable <span class='gradient-highlight'>Pomodoro timer</span> with <span class='gradient-highlight'>productivity stats</span> and <span class='gradient-highlight'>focus tracking</span>.",
-    image: "https://images.unsplash.com/photo-1501139083538-0139583c060f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    tags: ["React", "Timer", "Productivity", "Stats"],
-    demoUrl: "https://pomo-focus-eta.vercel.app/",
-    githubUrl: "https://github.com/kalpsenghani/PomoFocus"
+    title: "Discord Welcome Bot",
+    description: "Customizable <span class='gradient-highlight'>welcome messages</span> with <span class='gradient-highlight'>embed templates</span>, <span class='gradient-highlight'>auto-roles</span>, and member verification.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Embeds", "Autoroles", "Welcome"],
+    demoUrl: undefined,
+    githubUrl: ""
   },
   {
-    title: "AI Job Advisor",
-    description: "Full-stack <span class='gradient-highlight'>AI resume analyzer</span> powered by <span class='gradient-highlight'>OpenAI GPT-4</span> with <span class='gradient-highlight'>job recommendations</span> and <span class='gradient-highlight'>interview prep</span>.",
-    image: "/lovable-uploads/Job-Advisor.png",
-    tags: ["Axios", "OpenAI GPT-4", "React", "Node.js"],
-    demoUrl: "https://yourjobadvisor.netlify.app/",
-    githubUrl: "https://github.com/kalpsenghani/AI_Job_Advisor"
+    title: "Discord Reaction Roles",
+    description: "Interactive <span class='gradient-highlight'>reaction role system</span> with <span class='gradient-highlight'>role menus</span>, <span class='gradient-highlight'>multi-select</span>, and role persistence.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Reactions", "Roles", "Permissions"],
+    demoUrl: undefined,
+    githubUrl: ""
+  },
+  {
+    title: "Discord Auto-Moderation",
+    description: "Intelligent <span class='gradient-highlight'>auto-moderation</span> with <span class='gradient-highlight'>spam detection</span>, <span class='gradient-highlight'>filter system</span>, and automated actions.",
+    image: "https://images.unsplash.com/photo-1614680376573-df3480f0c6ff?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Moderation", "Automation", "Filter"],
+    demoUrl: undefined,
+    githubUrl: ""
+  },
+  {
+    title: "Discord Embed Builder",
+    description: "Web-based <span class='gradient-highlight'>embed builder</span> with <span class='gradient-highlight'>live preview</span>, <span class='gradient-highlight'>JSON export</span>, and template library.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    tags: ["React", "Discord.js", "Embeds", "Builder"],
+    demoUrl: undefined,
+    githubUrl: ""
+  },
+  {
+    title: "Discord Server Stats",
+    description: "Real-time <span class='gradient-highlight'>server statistics</span> with <span class='gradient-highlight'>member tracking</span>, <span class='gradient-highlight'>growth charts</span>, and activity metrics.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Analytics", "MongoDB", "Stats"],
+    demoUrl: undefined,
+    githubUrl: ""
+  },
+  {
+    title: "Discord Command Handler",
+    description: "Modular <span class='gradient-highlight'>command system</span> with <span class='gradient-highlight'>slash commands</span>, <span class='gradient-highlight'>cooldowns</span>, and permission checks.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Slash Commands", "Node.js", "Handler"],
+    demoUrl: undefined,
+    githubUrl: ""
+  },
+  {
+    title: "Discord Logging System",
+    description: "Comprehensive <span class='gradient-highlight'>logging system</span> with <span class='gradient-highlight'>webhook integration</span>, <span class='gradient-highlight'>event tracking</span>, and audit logs.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80",
+    tags: ["Discord.js", "Webhooks", "Logging", "MongoDB"],
+    demoUrl: undefined,
+    githubUrl: ""
   }
-].filter(project => project.title !== "AI Content Platform");
+];
 
 export default function GlowingEffectDemo() {
   return (
     <ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
       {microProjectsData.map((project, idx) => (
-        <GridItem key={project.title} project={{
-          ...project,
-          image: project.image && project.image.startsWith('/') ? 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80' : project.image
-        }} />
+        <GridItem key={project.title} project={project} />
       ))}
     </ul>
   );

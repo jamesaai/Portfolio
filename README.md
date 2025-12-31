@@ -45,7 +45,7 @@ A modern, responsive portfolio website showcasing Discord bot development and Ro
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kalpsenghani/portfolio.git
+   git clone https://github.com/jamesaai/portfolio.git
    ```
 
 2. Navigate to the project directory:

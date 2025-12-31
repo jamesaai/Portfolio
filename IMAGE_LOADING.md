@@ -126,3 +126,5 @@ To verify images are loading correctly:
 - Images referenced with `/` are served from the public directory
 - The CSP allows all HTTPS sources, so external images should work
 
+
+
